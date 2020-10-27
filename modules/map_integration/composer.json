@@ -1,0 +1,13 @@
+{
+    "name": "map_integration",
+    "type": "drupal-module",
+    "description": "Integrate jvector js map with drupal",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/map_integration",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/map_integration",
+        "source": "http://cgit.drupalcode.org/map_integration",
+    },
+}

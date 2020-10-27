@@ -1,0 +1,17 @@
+
+# Map entity menu items definition
+entity.map_entity.collection:
+  title: 'Map entity list'
+  route_name: entity.map_entity.collection
+  description: 'List Map entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Map entity type menu items definition
+entity.map_entity_type.collection:
+  title: 'Map entity type'
+  route_name: entity.map_entity_type.collection
+  description: 'List Map entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99

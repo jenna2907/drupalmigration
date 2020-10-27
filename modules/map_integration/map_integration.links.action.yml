@@ -1,0 +1,10 @@
+entity.map_entity.add_form:
+  route_name: entity.map_entity.add_page
+  title: 'Add Map entity'
+  appears_on:
+    - entity.map_entity.collection
+entity.map_entity_type.add_form:
+  route_name: entity.map_entity_type.add_form
+  title: 'Add Map entity type'
+  appears_on:
+    - entity.map_entity_type.collection

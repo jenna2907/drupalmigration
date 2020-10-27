@@ -1,0 +1,5 @@
+name: 'Map Entity'
+type: module
+description: 'create map entity with drupal'
+core: 8.x
+package: 'Custom'

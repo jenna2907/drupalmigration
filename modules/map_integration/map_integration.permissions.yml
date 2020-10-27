@@ -1,0 +1,33 @@
+add map entity entities:
+  title: 'Create new Map entity entities'
+
+administer map entity entities:
+  title: 'Administer Map entity entities'
+  description: 'Allow to access the administration form to configure Map entity entities.'
+  restrict access: true
+
+delete map entity entities:
+  title: 'Delete Map entity entities'
+
+edit map entity entities:
+  title: 'Edit Map entity entities'
+
+view published map entity entities:
+  title: 'View published Map entity entities'
+
+view unpublished map entity entities:
+  title: 'View unpublished Map entity entities'
+
+view all map entity revisions:
+  title: 'View all Map entity revisions'
+
+revert all map entity revisions:
+  title: 'Revert all Map entity revisions'
+  description: 'Role requires permission <em>view Map entity revisions</em> and <em>edit rights</em> for map entity entities in question or <em>administer map entity entities</em>.'
+
+delete all map entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Map entity revisions</em> and <em>delete rights</em> for map entity entities in question or <em>administer map entity entities</em>.'
+
+permission_callbacks:
+  - \Drupal\map_integration\MapEntityPermissions::generatePermissions

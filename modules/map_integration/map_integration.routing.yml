@@ -1,0 +1,19 @@
+map_integration.city:
+  path: '/getcity'
+  defaults:
+    _controller: 'Drupal\map_integration\Controller\CityController::getcity'
+    _title: 'City'
+  requirements:
+    _permission: 'administer content'
+
+map_integration.addcity:
+  path: '/addcity'
+  defaults:
+    _controller: 'Drupal\map_integration\Controller\CityController::addcity'
+    _title: 'City'
+  requirements:
+    _permission: 'administer content'
+
+
+
+

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains map_integration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function map_integration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the map_integration module.
+    case 'help.page.map_integration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integrate entity map with drupal') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function map_integration_theme() {
+  $theme = [];
+  $theme['map_entity'] = [
+    'render element' => 'elements',
+    'file' => 'map_entity.page.inc',
+    'template' => 'map_entity',
+  ];
+  $theme['map_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'map_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function map_integration_theme_suggestions_map_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#map_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'map_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'map_entity__' . $entity->bundle();
+  $suggestions[] = 'map_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'map_entity__' . $entity->id();
+  $suggestions[] = 'map_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
